@@ -49,9 +49,9 @@ const translations = {
     service4_title: "Électronique, automatisation et robotique",
     service4_desc:
       "Conception de circuits, soudure, programmation de microcontrôleurs (Arduino, C embarqué), synchronisation, électronique analogique/numérique, automatisation industrielle, systèmes robotiques.",
-    service5_title: "Opérations de drone",
+    service5_title: "Vision numérique & conception de capteurs",
     service5_desc:
-      "Pilote certifié SATP pour opérations avancées. Services d'inspection aérienne, d'arpentage, de cartographie et de collecte de données.",
+      "Vision par ordinateur, traitement d'images, conception de capteurs et de chaînes de mesure physique. Pilote de drone certifié SATP comme outil de mesure de phénomènes physiques.",
     service6_title: "Consultation R&D et prototypage",
     service6_desc:
       "Conception CAO (SolidWorks), impression 3D, prototypage, support en salle blanche/nanofabrication, accompagnement technique du concept à la réalisation.",
@@ -70,9 +70,9 @@ const translations = {
     why4_title: "Contrats flexibles",
     why4_desc:
       "Modèle contractuel adaptable : court terme, long terme ou par projet, selon vos besoins.",
-    why5_title: "Pilote de drone certifié",
+    why5_title: "Vision et capteurs sur mesure",
     why5_desc:
-      "Opérations aériennes certifiées SATP pour l'inspection, l'arpentage et la collecte de données terrain.",
+      "Conception de capteurs et chaînes de mesure physique adaptés à vos besoins, incluant la vision numérique et le drone comme outils de mesure.",
     why6_title: "À la fine pointe",
     why6_desc:
       "Tous deux poursuivant des études universitaires avancées — toujours au courant des dernières technologies et méthodes.",
@@ -143,9 +143,9 @@ const translations = {
     service4_title: "Electronics, Automation & Robotics",
     service4_desc:
       "Circuit design, soldering, microcontroller programming (Arduino, embedded C), trigger synchronization, analog/digital electronics, industrial automation, robotic systems.",
-    service5_title: "Drone Operations",
+    service5_title: "Computer Vision & Sensor Design",
     service5_desc:
-      "SATP-certified advanced operations pilot. Aerial inspection, surveying, mapping, and data collection services.",
+      "Computer vision, image processing, sensor design, and physical measurement chains. SATP-certified drone pilot as a tool for measuring physical phenomena.",
     service6_title: "R&D Consulting & Prototyping",
     service6_desc:
       "CAD design (SolidWorks), 3D printing, prototyping, cleanroom/nanofabrication support, technical project support from concept to realization.",
@@ -164,9 +164,9 @@ const translations = {
     why4_title: "Flexible Contracts",
     why4_desc:
       "Adaptable contract model: short-term, long-term, or project-based, according to your needs.",
-    why5_title: "Certified Drone Pilot",
+    why5_title: "Custom Vision & Sensors",
     why5_desc:
-      "SATP-certified aerial operations for inspection, surveying, and field data collection.",
+      "Custom sensor and physical measurement chain design tailored to your needs, including computer vision and drone as measurement tools.",
     why6_title: "Cutting Edge",
     why6_desc:
       "Both pursuing advanced university degrees — always up to date with the latest technologies and methods.",
