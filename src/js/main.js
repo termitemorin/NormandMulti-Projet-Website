@@ -1,0 +1,1 @@
+// TechnoTP - Main JavaScript
