@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://technotp.com/sitemap.xml
+
+Sitemap: https://termitemorin.github.io/NormandMulti-Projet-Website/sitemap.xml

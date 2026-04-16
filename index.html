@@ -1,255 +1,298 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechnoTP — Services contractuels en technologie du génie physique</title>
-    <meta name="description" content="TechnoTP offre des services contractuels en technologie du génie physique, instrumentation scientifique, optique laser, robotique et automatisation. Basé à Sherbrooke, QC.">
-    <meta property="og:title" content="TechnoTP — Services contractuels en technologie du génie physique">
-    <meta property="og:description" content="TechnoTP offre des services contractuels en technologie du génie physique, instrumentation scientifique, optique laser, robotique et automatisation. Basé à Sherbrooke, QC.">
-    <meta property="og:url" content="https://technotp.com">
-    <meta property="og:type" content="website">
-    <link rel="icon" type="image/png" href="assets/logoCropped.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="src/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Normand Multi-Projets | Aménagement paysager à Montmagny, QC</title>
+  <meta name="description" content="Normand Multi-Projets — Spécialiste en aménagement paysager à Montmagny, QC. Pavé uni, murets, marches en béton, nivellement de terrain et pose de gazon. Soumission gratuite.">
+  <meta name="keywords" content="aménagement paysager, pavé uni, murets, marches béton, nivellement terrain, gazon, Montmagny, Québec, paysagiste">
+  <meta name="author" content="Normand Multi-Projets">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Normand Multi-Projets | Aménagement paysager">
+  <meta property="og:description" content="Spécialiste en aménagement paysager à Montmagny, QC. Pavé uni, murets, marches, nivellement et gazon.">
+  <meta property="og:image" content="assets/banner.png">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_CA">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="src/css/style.css">
 </head>
 <body>
 
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <a href="#" class="nav-logo">
-                <img src="assets/logoCropped.png" alt="TechnoTP Logo">
-            </a>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#about" data-i18n="nav_about">À propos</a></li>
-                <li><a href="#services" data-i18n="nav_services">Services</a></li>
-                <li><a href="#why" data-i18n="nav_why">Pourquoi nous</a></li>
-                <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
-                <li>
-                    <button class="lang-toggle" id="langToggle" aria-label="Toggle language">
-                        <span class="lang-option active" data-lang="fr">FR</span>
-                        <span class="lang-separator">|</span>
-                        <span class="lang-option" data-lang="en">EN</span>
-                    </button>
-                </li>
-            </ul>
-            <button class="nav-hamburger" id="hamburger" aria-label="Menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+  <!-- ===== NAVBAR ===== -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#accueil" class="nav-logo">
+        <img src="assets/logo.jpg" alt="Normand Multi-Projets" width="48" height="48">
+        <span class="nav-brand">Normand Multi-Projets</span>
+      </a>
+      <div id="navLinks" class="nav-links">
+        <a href="#accueil">Accueil</a>
+        <a href="#services">Services</a>
+        <a href="#realisations">Réalisations</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <button id="hamburger" class="hamburger" aria-label="Ouvrir le menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section id="accueil" class="hero">
+    <div class="hero-bg" style="background-image: url('assets/projet-foyer.jpg');"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Normand Multi-Projets</h1>
+      <p class="hero-tagline">Aménagement paysager d'exception</p>
+      <p class="hero-location">Montmagny, QC</p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn btn-primary">Demander une soumission</a>
+        <a href="#realisations" class="btn btn-outline">Voir nos réalisations</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section id="services" class="section">
+    <div class="container">
+      <h2 class="section-title">Nos services</h2>
+      <p class="section-subtitle">Des solutions complètes pour transformer votre espace extérieur</p>
+      <div class="services-grid">
+
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="4" y="4" width="16" height="16" rx="2"/>
+              <rect x="28" y="4" width="16" height="16" rx="2"/>
+              <rect x="4" y="28" width="16" height="16" rx="2"/>
+              <rect x="28" y="28" width="16" height="16" rx="2"/>
+            </svg>
+          </div>
+          <h3>Pavé uni</h3>
+          <p>Installation de pavé uni pour patios, trottoirs, entrées et terrasses. Finition soignée et durable pour embellir votre propriété.</p>
         </div>
-    </nav>
 
-    <!-- Hero -->
-    <section class="hero" id="hero">
-        <div class="hero-bg-grid"></div>
-        <div class="hero-content">
-            <h1 class="hero-title">TechnoTP</h1>
-            <p class="hero-tagline" data-i18n="hero_tagline">Services contractuels en technologie du génie physique</p>
-            <p class="hero-subtitle" data-i18n="hero_subtitle">Innover. Intégrer. Réussir.</p>
-            <div class="hero-cta">
-                <a href="#contact" class="btn btn-primary" data-i18n="hero_cta">Nous joindre</a>
-                <a href="#services" class="btn btn-outline" data-i18n="hero_services_cta">Nos services</a>
-            </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="4" y="6" width="40" height="8" rx="1"/>
+              <rect x="4" y="18" width="40" height="8" rx="1"/>
+              <rect x="4" y="30" width="40" height="8" rx="1"/>
+            </svg>
+          </div>
+          <h3>Murets et bordures</h3>
+          <p>Construction de murets de soutènement et bordures décoratives pour délimiter et structurer vos espaces extérieurs.</p>
         </div>
-    </section>
 
-    <!-- About -->
-    <section class="section about" id="about">
-        <div class="container">
-            <h2 class="section-title" data-i18n="about_title">Qui sommes-nous</h2>
-            <div class="about-intro">
-                <p data-i18n="about_intro">TechnoTP est une entreprise canadienne de services contractuels fondée à Sherbrooke, QC, par deux technologues en génie physique, diplômés du Cégep de La Pocatière et poursuivant des études universitaires à l'Université de Sherbrooke.</p>
-                <p data-i18n="about_intro2">Notre expertise complémentaire couvre le spectre complet de la physique appliquée — de l'optique et la spectroscopie à la robotique, l'automatisation et le développement logiciel.</p>
-            </div>
-            <div class="founders">
-                <!-- Édouard -->
-                <div class="founder-card">
-                    <div class="founder-photo">
-                        <img src="assets/ed.jpeg" alt="Édouard Morin">
-                    </div>
-                    <h3 class="founder-name" data-i18n="edouard_name">Édouard Morin</h3>
-                    <p class="founder-title" data-i18n="edouard_title">Co-fondateur</p>
-                    <div class="founder-details">
-                        <p class="founder-degree"><i class="fas fa-graduation-cap"></i> <span data-i18n="edouard_degree1">DEC Technologie du génie physique — Cégep de La Pocatière</span></p>
-                        <p class="founder-degree"><i class="fas fa-graduation-cap"></i> <span data-i18n="edouard_degree2">B.Sc. Physique — Université de Sherbrooke (en cours)</span></p>
-                        <p class="founder-specialties"><i class="fas fa-microscope"></i> <span data-i18n="edouard_specialties">Spectroscopie optique/laser, systèmes à vide, Python/PyQt, LabVIEW, acquisition de données, fibres optiques, pilote de drone certifié SATP</span></p>
-                    </div>
-                    <div class="founder-links">
-                        <a href="https://ca.linkedin.com/in/%C3%A9douard-morin-139b65276" target="_blank" rel="noopener" aria-label="LinkedIn Édouard Morin">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a class="obf-email" data-e="ZWRAdGVjaG5vdHAuY29t" aria-label="Email Édouard Morin">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Maxime -->
-                <div class="founder-card">
-                    <div class="founder-photo">
-                        <img src="assets/max.png" alt="Maxime Boucher">
-                    </div>
-                    <h3 class="founder-name" data-i18n="maxime_name">Maxime Boucher</h3>
-                    <p class="founder-title" data-i18n="maxime_title">Co-fondateur</p>
-                    <div class="founder-details">
-                        <p class="founder-degree"><i class="fas fa-graduation-cap"></i> <span data-i18n="maxime_degree1">DEC Technologie du génie physique — Cégep de La Pocatière</span></p>
-                        <p class="founder-degree"><i class="fas fa-graduation-cap"></i> <span data-i18n="maxime_degree2">B.Ing. Génie robotique — Université de Sherbrooke (en cours)</span></p>
-                        <p class="founder-specialties"><i class="fas fa-robot"></i> <span data-i18n="maxime_specialties">Robotique, automatisation, électronique de puissance, salle blanche/nanotechnologies, développement full-stack, Simulink, design mécanique</span></p>
-                    </div>
-                    <div class="founder-links">
-                        <a href="https://www.linkedin.com/in/maxime-boucher-0665aa3b7" target="_blank" rel="noopener" aria-label="LinkedIn Maxime Boucher">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a class="obf-email" data-e="bWF4QHRlY2hub3RwLmNvbQ==" aria-label="Email Maxime Boucher">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 44 h10 v-10 h10 v-10 h10 v-10 h10 v-10"/>
+              <path d="M4 44 h40"/>
+              <path d="M4 44 V4"/>
+            </svg>
+          </div>
+          <h3>Marches et escaliers</h3>
+          <p>Conception et réalisation de marches en béton et en pavé. Réparation et remplacement d'escaliers existants.</p>
         </div>
-    </section>
 
-    <!-- Services -->
-    <section class="section services" id="services">
-        <div class="container">
-            <h2 class="section-title" data-i18n="services_title">Nos services</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-bolt"></i></div>
-                    <h3 data-i18n="service1_title">Systèmes optiques et laser</h3>
-                    <p data-i18n="service1_desc">Conception, intégration et maintenance de montages optiques : spectroscopie laser (OES/LIBS), fibres optiques, alignement, sources et détecteurs, systèmes photoniques.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-flask"></i></div>
-                    <h3 data-i18n="service2_title">Instrumentation scientifique</h3>
-                    <p data-i18n="service2_desc">Installation, calibration et dépannage d'instruments de laboratoire : spectromètres, systèmes à vide, spectrométrie de masse, capteurs et systèmes d'acquisition de données.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-code"></i></div>
-                    <h3 data-i18n="service3_title">Développement logiciel pour l'instrumentation</h3>
-                    <p data-i18n="service3_desc">Applications GUI sur mesure (Python/PyQt), instruments virtuels LabVIEW, pipelines d'analyse de données, intégration matériel-logiciel, traitement du signal, développement full-stack.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-microchip"></i></div>
-                    <h3 data-i18n="service4_title">Électronique, automatisation et robotique</h3>
-                    <p data-i18n="service4_desc">Conception de circuits, soudure, programmation de microcontrôleurs (C embarqué), synchronisation, électronique analogique/numérique, automatisation industrielle, systèmes robotiques.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-eye"></i></div>
-                    <h3 data-i18n="service5_title">Vision numérique & conception de capteurs</h3>
-                    <p data-i18n="service5_desc">Vision par ordinateur, traitement d'images, conception de capteurs et de chaînes de mesure physique. Pilote de drone certifié SATP comme outil de mesure de phénomènes physiques.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-drafting-compass"></i></div>
-                    <h3 data-i18n="service6_title">Consultation R&D et prototypage</h3>
-                    <p data-i18n="service6_desc">Conception CAO (SolidWorks, AutoCAD), impression 3D, prototypage, support en salle blanche/nanofabrication, accompagnement technique du concept à la réalisation.</p>
-                </div>
-            </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 36 Q12 28 20 32 Q28 36 36 24 Q40 20 44 18"/>
+              <line x1="4" y1="40" x2="44" y2="40"/>
+              <path d="M4 40 L4 36"/>
+              <path d="M44 40 L44 18"/>
+            </svg>
+          </div>
+          <h3>Nivellement de terrain</h3>
+          <p>Préparation et nivellement de terrain pour assurer un drainage adéquat et une fondation solide pour vos projets.</p>
         </div>
-    </section>
 
-    <!-- Why TechnoTP -->
-    <section class="section why" id="why">
-        <div class="container">
-            <h2 class="section-title" data-i18n="why_title">Pourquoi TechnoTP</h2>
-            <div class="why-grid">
-                <div class="why-card">
-                    <div class="why-icon"><i class="fas fa-users"></i></div>
-                    <h3 data-i18n="why1_title">Expertise complémentaire</h3>
-                    <p data-i18n="why1_desc">Deux co-fondateurs couvrant le spectre complet : optique, robotique, logiciel, électronique, automatisation et travail terrain.</p>
-                </div>
-                <div class="why-card">
-                    <div class="why-icon"><i class="fas fa-flask-vial"></i></div>
-                    <h3 data-i18n="why2_title">Expérience terrain et labo</h3>
-                    <p data-i18n="why2_desc">Expérience concrète en laboratoires R&D et en environnements industriels — RDDC, Solutions Novika, 3IT/L2N, BRP, RAYOPS.</p>
-                </div>
-                <div class="why-card">
-                    <div class="why-icon"><i class="fas fa-language"></i></div>
-                    <h3 data-i18n="why3_title">Service bilingue</h3>
-                    <p data-i18n="why3_desc">Service complet en français et en anglais pour répondre aux besoins de tous vos projets au Canada et à l'international.</p>
-                </div>
-                <div class="why-card">
-                    <div class="why-icon"><i class="fas fa-handshake"></i></div>
-                    <h3 data-i18n="why4_title">Contrats flexibles</h3>
-                    <p data-i18n="why4_desc">Modèle contractuel adaptable : court terme, long terme ou par projet, selon vos besoins.</p>
-                </div>
-                <div class="why-card">
-                    <div class="why-icon"><i class="fas fa-eye"></i></div>
-                    <h3 data-i18n="why5_title">Vision et capteurs sur mesure</h3>
-                    <p data-i18n="why5_desc">Conception de capteurs et chaînes de mesure physique adaptés à vos besoins, incluant la vision numérique et le drone comme outils de mesure.</p>
-                </div>
-                <div class="why-card">
-                    <div class="why-icon"><i class="fas fa-rocket"></i></div>
-                    <h3 data-i18n="why6_title">À la fine pointe</h3>
-                    <p data-i18n="why6_desc">Tous deux poursuivant des études universitaires avancées — toujours au courant des dernières technologies et méthodes.</p>
-                </div>
-            </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M24 4 C20 12 10 14 8 22 C6 30 12 38 24 44 C36 38 42 30 40 22 C38 14 28 12 24 4Z"/>
+              <path d="M24 16 V32"/>
+              <path d="M18 24 L24 18 L30 24"/>
+            </svg>
+          </div>
+          <h3>Pose de gazon</h3>
+          <p>Pose de gazon en rouleau pour un résultat instantané. Préparation du sol incluse pour un enracinement optimal.</p>
         </div>
-    </section>
 
-    <!-- Contact -->
-    <section class="section contact" id="contact">
-        <div class="container">
-            <h2 class="section-title" data-i18n="contact_title">Nous joindre</h2>
-            <div class="contact-wrapper">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h4 data-i18n="contact_general">Courriel général</h4>
-                            <a class="obf-email" data-e="aW5mb0B0ZWNobm90cC5jb20=">info[at]technotp.com</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h4 data-i18n="contact_location">Emplacement</h4>
-                            <p data-i18n="contact_location_value">Sherbrooke, QC, Canada</p>
-                        </div>
-                    </div>
-
-                    <div class="contact-people">
-                        <div class="contact-person">
-                            <h4>Édouard Morin</h4>
-                            <p><i class="fas fa-envelope"></i> <a class="obf-email" data-e="ZWRAdGVjaG5vdHAuY29t">ed[at]technotp.com</a></p>
-                            <p><i class="fab fa-linkedin"></i> <a href="https://ca.linkedin.com/in/%C3%A9douard-morin-139b65276" target="_blank" rel="noopener">LinkedIn</a></p>
-                        </div>
-                        <div class="contact-person">
-                            <h4>Maxime Boucher</h4>
-                            <p><i class="fas fa-envelope"></i> <a class="obf-email" data-e="bWF4QHRlY2hub3RwLmNvbQ==">max[at]technotp.com</a></p>
-                            <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/maxime-boucher-0665aa3b7" target="_blank" rel="noopener">LinkedIn</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="24" cy="24" r="18"/>
+              <path d="M24 10 L24 24 L34 30"/>
+              <circle cx="24" cy="24" r="3" fill="currentColor"/>
+            </svg>
+          </div>
+          <h3>Aménagement complet</h3>
+          <p>Prise en charge complète de votre projet d'aménagement, de la conception à la réalisation. Un seul interlocuteur pour tous vos besoins.</p>
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <img src="assets/logoCropped.png" alt="TechnoTP" class="footer-logo">
-                    <p class="footer-tagline" data-i18n="footer_tagline">Innovate. Integrate. Succeed.</p>
-                </div>
-                <div class="footer-links">
-                    <a href="https://ca.linkedin.com/in/%C3%A9douard-morin-139b65276" target="_blank" rel="noopener" aria-label="LinkedIn Édouard">
-                        <i class="fab fa-linkedin"></i> Édouard
-                    </a>
-                    <a href="https://www.linkedin.com/in/maxime-boucher-0665aa3b7" target="_blank" rel="noopener" aria-label="LinkedIn Maxime">
-                        <i class="fab fa-linkedin"></i> Maxime
-                    </a>
-                </div>
-                <p class="footer-copy" data-i18n="footer_copy">© 2026 TechnoTP. Tous droits réservés.</p>
-            </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RÉALISATIONS ===== -->
+  <section id="realisations" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Nos réalisations</h2>
+      <p class="section-subtitle">Quelques projets dont nous sommes fiers</p>
+      <div class="gallery-grid">
+        <div class="gallery-item" data-caption="Terrasse en pavé uni avec marches intégrées">
+          <img src="assets/projet-terrasse.jpg" alt="Terrasse en pavé uni avec marches" loading="lazy">
+          <div class="gallery-overlay">
+            <span>Voir le projet</span>
+          </div>
         </div>
-    </footer>
+        <div class="gallery-item" data-caption="Grand patio en pavé uni avec foyer extérieur au bord du lac">
+          <img src="assets/projet-foyer.jpg" alt="Patio avec foyer extérieur" loading="lazy">
+          <div class="gallery-overlay">
+            <span>Voir le projet</span>
+          </div>
+        </div>
+        <div class="gallery-item" data-caption="Patio en pavé uni avec escalier et aménagement floral">
+          <img src="assets/projet-patio.jpg" alt="Patio avec escalier en pavé" loading="lazy">
+          <div class="gallery-overlay">
+            <span>Voir le projet</span>
+          </div>
+        </div>
+        <div class="gallery-item" data-caption="Réfection de marches en béton — Avant et après">
+          <img src="assets/projet-marches.jpg" alt="Réfection de marches — avant/après" loading="lazy">
+          <div class="gallery-overlay">
+            <span>Voir le projet</span>
+          </div>
+        </div>
+        <div class="gallery-item" data-caption="Bordure en pierre décorative le long de l'entrée">
+          <img src="assets/projet-bordure.jpg" alt="Bordure en pierre le long de l'entrée" loading="lazy">
+          <div class="gallery-overlay">
+            <span>Voir le projet</span>
+          </div>
+        </div>
+        <div class="gallery-item" data-caption="Base en pavé uni pour mobilier de jardin">
+          <img src="assets/projet-balancoire.jpg" alt="Base en pavé pour balançoire" loading="lazy">
+          <div class="gallery-overlay">
+            <span>Voir le projet</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <script src="src/js/translations.js"></script>
-    <script src="src/js/main.js"></script>
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2 class="section-title">Contactez-nous</h2>
+      <p class="section-subtitle">Demandez votre soumission gratuite dès aujourd'hui</p>
+      <div class="contact-grid">
+
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+            </div>
+            <div>
+              <h3>Téléphone</h3>
+              <a href="tel:+14182340628">(418) 234-0628</a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+            </div>
+            <div>
+              <h3>Courriel</h3>
+              <a href="#" class="obf-email" data-e="aGVucmkubm9ybWFuZEBob3RtYWlsLmNvbQ==">henri.normand[at]hotmail.com</a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+            </div>
+            <div>
+              <h3>Emplacement</h3>
+              <p>Montmagny, QC</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              </svg>
+            </div>
+            <div>
+              <h3>Facebook</h3>
+              <a href="https://www.facebook.com/profile.php?id=61559239611775" target="_blank" rel="noopener noreferrer">Suivez-nous sur Facebook</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-map">
+          <img src="assets/logo.jpg" alt="Normand Multi-Projets" class="contact-logo">
+          <p class="contact-cta">Appelez-nous ou écrivez-nous pour planifier votre projet d'aménagement paysager. Soumissions gratuites pour la région de Montmagny et les environs.</p>
+          <a href="tel:+14182340628" class="btn btn-primary btn-block">(418) 234-0628</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <img src="assets/logo.jpg" alt="Normand Multi-Projets" width="40" height="40">
+          <span>Normand Multi-Projets</span>
+        </div>
+        <p class="footer-copy">&copy; 2026 Normand Multi-Projets. Tous droits réservés.</p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/profile.php?id=61559239611775" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <button class="lightbox-close" aria-label="Fermer">&times;</button>
+    <button class="lightbox-prev" aria-label="Précédent">&#10094;</button>
+    <button class="lightbox-next" aria-label="Suivant">&#10095;</button>
+    <img id="lightboxImg" src="" alt="">
+    <p id="lightboxCaption" class="lightbox-caption"></p>
+  </div>
+
+  <script src="src/js/main.js"></script>
 </body>
 </html>

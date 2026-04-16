@@ -1,31 +1,9 @@
-// TechnoTP — Main JavaScript
-
 (function () {
   "use strict";
 
-  let currentLang = "fr";
-
-  // --- Language Toggle ---
-  function setLanguage(lang) {
-    currentLang = lang;
-    document.documentElement.lang = lang;
-
-    document.querySelectorAll("[data-i18n]").forEach((el) => {
-      const key = el.getAttribute("data-i18n");
-      if (translations[lang] && translations[lang][key]) {
-        el.textContent = translations[lang][key];
-      }
-    });
-
-    // Update active indicator
-    document.querySelectorAll(".lang-option").forEach((opt) => {
-      opt.classList.toggle("active", opt.dataset.lang === lang);
-    });
-  }
-
   // --- Navbar scroll effect ---
   function handleNavScroll() {
-    const navbar = document.getElementById("navbar");
+    var navbar = document.getElementById("navbar");
     if (window.scrollY > 50) {
       navbar.classList.add("scrolled");
     } else {
@@ -35,17 +13,16 @@
 
   // --- Mobile menu ---
   function setupHamburger() {
-    const hamburger = document.getElementById("hamburger");
-    const navLinks = document.getElementById("navLinks");
+    var hamburger = document.getElementById("hamburger");
+    var navLinks = document.getElementById("navLinks");
 
-    hamburger.addEventListener("click", () => {
+    hamburger.addEventListener("click", function () {
       hamburger.classList.toggle("active");
       navLinks.classList.toggle("open");
     });
 
-    // Close menu when a link is clicked
-    navLinks.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", () => {
+    navLinks.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
         hamburger.classList.remove("active");
         navLinks.classList.remove("open");
       });
@@ -54,15 +31,17 @@
 
   // --- Scroll animations ---
   function setupScrollAnimations() {
-    const elements = document.querySelectorAll(
-      ".service-card, .why-card, .founder-card, .contact-wrapper, .about-intro"
+    var elements = document.querySelectorAll(
+      ".service-card, .contact-item, .gallery-item"
     );
 
-    elements.forEach((el) => el.classList.add("fade-in"));
+    elements.forEach(function (el) {
+      el.classList.add("fade-in");
+    });
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
+    var observer = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
           if (entry.isIntersecting) {
             entry.target.classList.add("visible");
             observer.unobserve(entry.target);
@@ -72,46 +51,91 @@
       { threshold: 0.1, rootMargin: "0px 0px -40px 0px" }
     );
 
-    elements.forEach((el) => observer.observe(el));
+    elements.forEach(function (el) {
+      observer.observe(el);
+    });
   }
 
   // --- Email obfuscation ---
   function deobfuscateEmails() {
-    document.querySelectorAll(".obf-email").forEach((el) => {
-      const encoded = el.getAttribute("data-e");
+    document.querySelectorAll(".obf-email").forEach(function (el) {
+      var encoded = el.getAttribute("data-e");
       if (!encoded) return;
-      const email = atob(encoded);
+      var email = atob(encoded);
       el.href = "mailto:" + email;
-      // Update visible text if it contains the [at] placeholder
-      if (el.textContent.includes("[at]")) {
+      if (el.textContent.indexOf("[at]") !== -1) {
         el.textContent = email;
       }
     });
   }
 
-  // --- Init ---
-  document.addEventListener("DOMContentLoaded", () => {
-    // Language toggle
-    const langToggle = document.getElementById("langToggle");
-    langToggle.addEventListener("click", () => {
-      const newLang = currentLang === "fr" ? "en" : "fr";
-      setLanguage(newLang);
+  // --- Gallery Lightbox ---
+  function setupLightbox() {
+    var lightbox = document.getElementById("lightbox");
+    var lightboxImg = document.getElementById("lightboxImg");
+    var lightboxCaption = document.getElementById("lightboxCaption");
+    var items = document.querySelectorAll(".gallery-item");
+    var currentIndex = 0;
+
+    function openLightbox(index) {
+      currentIndex = index;
+      var item = items[index];
+      var img = item.querySelector("img");
+      var caption = item.getAttribute("data-caption") || "";
+
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+      lightboxCaption.textContent = caption;
+      lightbox.classList.add("active");
+      lightbox.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove("active");
+      lightbox.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+    }
+
+    function navigate(direction) {
+      currentIndex =
+        (currentIndex + direction + items.length) % items.length;
+      openLightbox(currentIndex);
+    }
+
+    items.forEach(function (item, index) {
+      item.addEventListener("click", function () {
+        openLightbox(index);
+      });
     });
 
-    // Navbar
+    lightbox.querySelector(".lightbox-close").addEventListener("click", closeLightbox);
+    lightbox.querySelector(".lightbox-prev").addEventListener("click", function () {
+      navigate(-1);
+    });
+    lightbox.querySelector(".lightbox-next").addEventListener("click", function () {
+      navigate(1);
+    });
+
+    lightbox.addEventListener("click", function (e) {
+      if (e.target === lightbox) closeLightbox();
+    });
+
+    document.addEventListener("keydown", function (e) {
+      if (!lightbox.classList.contains("active")) return;
+      if (e.key === "Escape") closeLightbox();
+      if (e.key === "ArrowLeft") navigate(-1);
+      if (e.key === "ArrowRight") navigate(1);
+    });
+  }
+
+  // --- Init ---
+  document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("scroll", handleNavScroll, { passive: true });
     handleNavScroll();
-
-    // Mobile menu
     setupHamburger();
-
-    // Scroll animations
     setupScrollAnimations();
-
-    // Email obfuscation
     deobfuscateEmails();
-
-    // Set initial language
-    setLanguage("fr");
+    setupLightbox();
   });
 })();
